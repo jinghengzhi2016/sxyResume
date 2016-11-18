@@ -19,7 +19,7 @@
 <body>
 <section class="main">
     <div class="music">
-        <audio src="audio/beyond.MP3" loop preload="none" id="beyond"></audio>
+        <audio src="video/whiteNight.mp3" loop preload="none" id="beyond"></audio>
 
     </div>
     <div class="swiper-container">
@@ -79,6 +79,7 @@
                 <div>具有非常扎实的原生JS基础，熟悉闭包、作用域链、事件机制、面向对象、原型链等</div>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
 </section>
 <script src="js/swiper.min.js"></script>
@@ -86,6 +87,8 @@
     var mySwiper=new Swiper(".swiper-container",{
         direction:"vertical",
         effect:'slide',
+        pagination: '.swiper-pagination',
+        autoplay: 4300,
 
 
         onTransitionEnd:function(swiper){
@@ -103,7 +106,26 @@
             slides[0].id="page1";
         }
 
+    });
+    var music=document.querySelector('.music');
+    var beyond=document.querySelector('#beyond');
+    window.setTimeout(function(){
+        beyond.play();
+        beyond.addEventListener('canplay',function(){
+            music.className='music musicCur';
+        })
+    },1000)
+    music.addEventListener('click',function(){
+        if(beyond.paused){
+            beyond.play();
+            music.className='music musicCur';
+        }else {
+            beyond.pause();
+            music.className='music';
+            music.style.opacity=1;
+        }
     })
+
 </script>
 </body>
 </html>

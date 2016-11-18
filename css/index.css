@@ -18,7 +18,7 @@ html,body{
 }
 /*第一屏*/
 .slide1{
-    background:url("../img/1.jpg") no-repeat center;
+    background:url("../img/01.jpg") no-repeat center;
     background-size:cover;
 }
 .slide1 img{
@@ -93,7 +93,7 @@ html,body{
 
 /*第二屏*/
 .slide2{
-    background:url("../img/2.jpg") no-repeat center;
+    background:url("../img/02.jpg") no-repeat center;
     background-size:cover;
 }
 .slide2 p{
@@ -288,7 +288,7 @@ html,body{
 
 /*第三屏*/
 .slide3{
-    background:url("../img/3.jpg") no-repeat center;
+    background:url("../img/03.jpg") no-repeat center;
     background-size:cover;
 }
 .slide3 div{
@@ -369,7 +369,7 @@ html,body{
 
 /*第四屏*/
 .slide4{
-    background:url("../img/4.jpg") no-repeat center;
+    background:url("../img/04.jpg") no-repeat center;
     background-size:cover;
 }
 .slide4 div{
@@ -415,7 +415,7 @@ html,body{
 
 /*第五屏*/
 .slide5{
-    background:url("../img/5.jpg") no-repeat center;
+    background:url("../img/05.jpg") no-repeat center;
     background-size:cover;
 }
 .slide5 div{
@@ -463,7 +463,7 @@ html,body{
 
 
 .slide6{
-    background:url("../img/6.jpg") no-repeat center;
+    background:url("../img/06.jpg") no-repeat center;
     background-size:cover;
 }
 .slide6 div{
@@ -522,4 +522,37 @@ html,body{
 #page6 div:nth-child(4){
     -webkit-animation: lightSpeedIn 1s 1.5s both;
     animation: lightSpeedIn 1s 1.5s both;
+}
+
+.music{
+    position: absolute;
+    width:0.6rem;
+    height:0.6rem;
+    top:0.2rem;
+    right:0.2rem;
+    background: url("../img/music.svg") no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    opacity: 0;
+}
+.musicCur{
+    opacity: 1;
+    -webkit-animation: move 1s linear infinite both;
+    animation: move 1s linear infinite both;
+}
+@-webkit-keyframes move {
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+@keyframes move {
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
 }
